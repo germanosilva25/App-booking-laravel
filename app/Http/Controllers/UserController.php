@@ -37,6 +37,76 @@ class UserController extends BaseController
         ];
         return $nomes;
     }
+
+    public function listaPessoas(){
+        $pessoas = [
+            [
+                "nome" => "Maria",
+                "CEP" => "24908102",
+                "UF" => "MG"
+            ],
+            [
+                "nome" => "João",
+                "CEP" => "22011900",
+                "UF" => "SP"
+            ],
+            [
+                "nome" => "Joaquim",
+                "CEP" => "26440332",
+                "UF" => "PR"
+            ],
+        ];
+
+        
+
+        return $pessoas;
+    }
+
+    public function array(){
+        $letras = [
+           
+            [
+                "A",
+                "E",
+                "I",
+                "O",
+                "U",
+            ],
+            [
+
+                "B",
+                "C",
+                "D",
+               
+                "F",
+                "G",
+                "H",
+                
+                "J",
+                "K",
+                "L",
+                "M",
+                "N",
+                
+                "P",
+                "Q",
+                "R",
+                "S",
+                "T",
+               
+                "V",
+                "W",
+                "X",
+                "Y",
+                "Z"
+            ],
+            [
+                "AO"
+            ]
+        ];
+
+        return $letras[2][0];
+    }
 }
 
 

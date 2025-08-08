@@ -8,6 +8,8 @@ use App\Http\Controllers\ServicoController;
 
 Route::get('', [UserController::class, 'index']);
 Route::get('lista', [UserController::class, 'taravis']);
+Route::get('lista-pessoas', [UserController::class, 'listaPessoas']);
+Route::get('array', [UserController::class, 'array']);
 
 
 
