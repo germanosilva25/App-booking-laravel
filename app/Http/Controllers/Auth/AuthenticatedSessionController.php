@@ -72,7 +72,42 @@ class AuthenticatedSessionController extends Controller
         $user = [];
         $tem = '';
 
+        if (Auth::user()){
+
+            return 'kmklmlk mlm';
+        }
+        else{
+            
+
+        }
         
+
+        return response()->json([
+            'msg' => $mensagem,
+            'url' => $url,
+            // 'token' => $token,
+            'owner' => $usuario,
+            'arr' => $ownerDetails,
+            'email' => $email,
+            'id' => $id,
+            'tem user' => $tem
+            // 'email_verified' => $email_verified
+        ]);
+
+
+
+
+
+
+
+        if (Auth::user() && Auth::user()->id_grupo == 2){
+            return redirect()->action([PacienteController::class, 'pagamentoConsulta']);
+        }
+       
+        
+        $url = $google->getAuthorizationUrl();
+        return view('auth.login-paciente', array('url' => $url));
+    
     }
 }
 
