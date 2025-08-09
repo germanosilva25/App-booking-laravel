@@ -52,6 +52,28 @@ class AuthenticatedSessionController extends Controller
 
         return redirect('/');
     }
+
+    /**
+     * Display the login view.
+     *
+     * @return \Illuminate\View\View
+     */
+    public function createPaciente(Request $request)
+    {
+        $state = json_decode($request->state);
+        $state = $request->state;
+        // print_r($state);
+        $ownerDetails = '';
+        $token = [];
+        $usuario = '';
+        $email = '';
+        $email_verified = '';
+        $id = '';
+        $user = [];
+        $tem = '';
+
+        
+    }
 }
 
 ?>
