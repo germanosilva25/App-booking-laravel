@@ -38,7 +38,7 @@ class UserController extends BaseController
         return $nomes;
     }
 
-    public function listaPessoas(){
+    public function listaPessoas(Request $request){
         $pessoas = [
             [
                 "nome" => "Maria",
@@ -56,10 +56,29 @@ class UserController extends BaseController
                 "UF" => "PR"
             ],
         ];
+        echo "<h1>".$request->nome."</h1>";
+        echo "<h1>".$request->idade."</h1>";
+        echo "
+            <table border='1'>
+                <tr>
+                    <th width='200'>Nome</th>
+                    <th width='200'>CEP</th>
+                    <th width='50'>UF</th>
+                </tr>";
+                foreach($pessoas as $p){
+                    echo "
+                        <tr>
+                            <td>{$p['nome']}</td>
+                            <td>{$p['CEP']}</td>
+                            <td>{$p['UF']}</td>
+                        </tr>
+                    ";
+                }
+        echo "
+            </table>
+        ";
 
-        
-
-        return $pessoas;
+        //return $pessoas;
     }
 
     public function array(){
